@@ -15,10 +15,10 @@ const displayStyle = {
   padding: 10,
 };
 
-const Display = (props) => {
+const Display = props => {
   const { result } = props;
   return <div id="display" style={displayStyle}>{result}</div>;
-}
+};
 
 Display.defaultProps = { result: '0' };
 
