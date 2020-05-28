@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-
 const Button = props => {
   const { name, wide, color } = props;
-  const width = wide === true ? '50%' : '25%';
+  const buttonSize = wide === true ? '50%' : '25%';
   const buttonStyle = {
     fontWeight: 'bold',
-    width: width,
+    width: buttonSize,
     backgroundColor: color,
-    border: 'solid 1px #C0C0C0'
-  }
+    border: 'solid 1px #C0C0C0',
+  };
   return (
     <button type="button" style={buttonStyle}>{name}</button>
   );
@@ -25,6 +23,8 @@ Button.defaultProps = {
 
 Button.propTypes = {
   name: PropTypes.string,
+  wide: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 export default Button;

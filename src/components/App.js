@@ -6,7 +6,7 @@ const mainContainerStyle = {
   display: 'flex',
   flexDirection: 'column',
   width: 700,
-}
+};
 
 const App = () => (
   <div id="main-container" style={mainContainerStyle}>

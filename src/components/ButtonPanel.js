@@ -4,12 +4,7 @@ import Button from './Button';
 const rowStyle = {
   display: 'flex',
   height: 100,
-}
-
-const orangeBoxStyle = {
-  backgroundColor: 'orange',
-  width: '25%',
-}
+};
 
 const ButtonPanel = () => (
   <div id="button-panel">
@@ -44,7 +39,7 @@ const ButtonPanel = () => (
       <Button name="+" />
     </div>
     <div id="group-5" style={rowStyle}>
-      <Button name="0" color="light-gray" wide={true} />
+      <Button name="0" color="light-gray" wide />
       <Button name="." color="light-gray" />
       <Button name="=" />
     </div>
