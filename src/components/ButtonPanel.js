@@ -18,12 +18,10 @@ const getGroups = () => {
       groups.push(<div id={`group-${currentGroup}`} style={rowStyle}>{buttons}</div>);
       currentGroup += 1;
       buttons = [];
+    } else if (symbols[i] === '0') {
+      buttons.push(<Button name={symbols[i]} color="light-gray" wide/>);
     } else {
-      if (symbols[i] === '0') {
-        buttons.push(<Button name={symbols[i]} color="light-gray" wide/>);
-      } else {
-        buttons.push(<Button name={symbols[i]} color="light-gray" />);
-      }
+      buttons.push(<Button name={symbols[i]} color="light-gray" />);
     }
   }
   return groups;
