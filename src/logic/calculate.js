@@ -1,7 +1,7 @@
 import operate from './operate';
 
 const calculate = (data, button) => {
-  let returnData = data;
+  const returnData = data;
   if (button === '+/-') {
     returnData.total *= -1;
     returnData.next *= -1;
@@ -10,6 +10,6 @@ const calculate = (data, button) => {
   }
 
   return returnData;
-}
+};
 
 export default calculate;

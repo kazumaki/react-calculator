@@ -12,7 +12,7 @@ const mainContainerStyle = {
 const App = () => (
   <div id="main-container" style={mainContainerStyle}>
     <Display />
-    <ButtonPanel calculate={calculate}/>
+    <ButtonPanel calculate={calculate} />
   </div>
 );
 

@@ -12,9 +12,9 @@ const operate = (numberOne, numberTwo, operation) => {
     result = Big(numberOne / numberTwo);
   } else {
     result = Big(numberOne * numberTwo / 100);
-  };
-  
+  }
+
   return result;
-}
+};
 
 export default operate;
