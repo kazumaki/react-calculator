@@ -16,16 +16,12 @@ const getGroups = () => {
     if ((i + 1) % 4 === 0 || symbols[i] === '=') {
       buttons.push(<Button name={symbols[i]} />);
       groups.push(<div id={`group-${currentGroup}`} style={rowStyle}>{buttons}</div>);
-      currentGroup++;
+      currentGroup += 1;
       buttons = [];
-    }
-    else 
-    {
+    } else {
       if (symbols[i] === '0') {
         buttons.push(<Button name={symbols[i]} color="light-gray" wide/>);
-      }
-      else
-      {
+      } else {
         buttons.push(<Button name={symbols[i]} color="light-gray" />);
       }
     }
