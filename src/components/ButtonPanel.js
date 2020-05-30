@@ -6,44 +6,37 @@ const rowStyle = {
   height: 100,
 };
 
+const symbols = ['AC', '+/-', '%', '÷', '7', '8', '9', 'X', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
+
 const ButtonPanel = () => (
   <div id="button-panel">
-    <div id="group-1" style={rowStyle}>
-      <Button name="AC" color="light-gray" />
-      <Button name="+/-" color="light-gray" />
-      <Button name="%" color="light-gray" />
-      <Button name="÷" />
-    </div>
-    <div id="group-2" style={rowStyle}>
-      <Button name="7" color="light-gray" />
-      <Button name="8" color="light-gray" />
-      <Button name="9" color="light-gray" />
-      <Button name="X" />
-    </div>
-    <div id="group-3" style={rowStyle}>
-      <Button name="4" color="light-gray" />
-      <Button name="5" color="light-gray" />
-      <Button name="6" color="light-gray" />
-      <Button name="-" />
-    </div>
-    <div id="group-3" style={rowStyle}>
-      <Button name="4" color="light-gray" />
-      <Button name="5" color="light-gray" />
-      <Button name="6" color="light-gray" />
-      <Button name="-" />
-    </div>
-    <div id="group-4" style={rowStyle}>
-      <Button name="1" color="light-gray" />
-      <Button name="2" color="light-gray" />
-      <Button name="3" color="light-gray" />
-      <Button name="+" />
-    </div>
-    <div id="group-5" style={rowStyle}>
-      <Button name="0" color="light-gray" wide />
-      <Button name="." color="light-gray" />
-      <Button name="=" />
-    </div>
+    {getGroups()}
   </div>
 );
+
+const getGroups = () => {
+  let buttons = [];
+  let groups = [];
+  let currentGroup = 0;
+  for(let i = 0; i < symbols.length; i++) {
+    if((i + 1) % 4 === 0 || symbols[i] === '=') {
+      buttons.push(<Button name={symbols[i]} />)
+      groups.push(<div id={`group-${currentGroup}`} style={rowStyle}>{buttons}</div>)
+      currentGroup++;
+      buttons = [];
+    }
+    else 
+    {
+      if (symbols[i] === '0') {
+        buttons.push(<Button name={symbols[i]} color="light-gray" wide/>)
+      }
+      else
+      {
+        buttons.push(<Button name={symbols[i]} color="light-gray" />)
+      }
+    }
+  }
+  return groups;
+}
 
 export default ButtonPanel;
