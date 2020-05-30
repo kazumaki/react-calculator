@@ -11,7 +11,7 @@ const Button = props => {
     border: 'solid 1px #C0C0C0',
   };
   return (
-    <button type="button" style={buttonStyle}>{name}</button>
+    <button type="button" onClick={props.handleClick} style={buttonStyle}>{name}</button>
   );
 };
 
@@ -25,6 +25,7 @@ Button.propTypes = {
   name: PropTypes.string,
   wide: PropTypes.bool,
   color: PropTypes.string,
+  handleClick: PropTypes.func,
 };
 
 export default Button;

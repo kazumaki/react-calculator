@@ -2,19 +2,23 @@ const Big = require('big.js');
 
 const operate = (numberOne, numberTwo, operation) => {
   let result;
+  const bigOne = new Big(numberOne);
+  const bigTwo = new Big(numberTwo);
+
   if (operation === '+') {
-    result = Big(numberOne + numberTwo);
+    result = bigOne.plus(bigTwo);
   } else if (operation === '-') {
-    result = Big(numberOne - numberTwo);
+    result = bigOne.minus(bigTwo);
   } else if (operation === 'X') {
-    result = Big(numberOne * numberTwo);
+    result = bigOne.times(bigTwo);
   } else if (operation === '÷') {
-    result = Big(numberOne / numberTwo);
-  } else {
-    result = Big(numberOne * numberTwo / 100);
+    result = bigOne.div(bigTwo);
+  } else if (operation === '%') {
+    console.log('eoq')
+    result = bigOne.times(bigTwo.div(100));
   }
 
-  return result;
+  return result.toFixed();
 };
 
 export default operate;
