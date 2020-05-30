@@ -12,10 +12,7 @@ class ButtonPanel extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    this.props.clickHandle(e.target.textContent);
+    this.clickHandle = props.clickHandle;
   }
 
   getGroups() {
@@ -37,6 +34,10 @@ class ButtonPanel extends React.Component {
     return groups;
   };
 
+  handleClick(e) {
+    this.clickHandle(e.target.textContent);
+  }
+
   render() {
     return (
       <div id="button-panel">
@@ -44,6 +45,10 @@ class ButtonPanel extends React.Component {
       </div>
     )
   }
+}
+
+ButtonPanel.propTypes = {
+  clickHandle: PropTypes.func,
 }
 
 export default ButtonPanel;

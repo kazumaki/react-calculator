@@ -9,13 +9,17 @@ const mainContainerStyle = {
   width: 700,
 };
 
-const operators = ['AC', '+/-', '%', '÷', '+', '-', 'X', '=']
+const operators = ['AC', '+/-', '%', '÷', '+', '-', 'X', '='];
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
-    this.state = { total: null, next: null, display: null, operation: null };
+    this.state = {
+      total: null,
+      next: null,
+      display: null,
+      operation: null
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 

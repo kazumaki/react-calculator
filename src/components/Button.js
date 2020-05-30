@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name, wide, color } = props;
+  const { name, wide, color, handleClick } = props;
   const buttonSize = wide === true ? '50%' : '25%';
   const buttonStyle = {
     fontWeight: 'bold',
@@ -11,7 +11,7 @@ const Button = props => {
     border: 'solid 1px #C0C0C0',
   };
   return (
-    <button type="button" onClick={props.handleClick} style={buttonStyle}>{name}</button>
+    <button type="button" onClick={handleClick} style={buttonStyle}>{name}</button>
   );
 };
 
@@ -19,6 +19,7 @@ Button.defaultProps = {
   name: '',
   color: 'orange',
   wide: false,
+  handleClick: () => {},
 };
 
 Button.propTypes = {
