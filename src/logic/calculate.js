@@ -1,14 +1,15 @@
-import operate from "./operate";
+import operate from './operate';
 
 const calculate = (data, button) => {
+  let returnData = data;
   if (button === '+/-') {
-    data.total = data.total * -1;
-    data.next = data.next * - 1;
+    returnData.total *= -1;
+    returnData.next *= -1;
   } else {
-    data.total = operate(data.total, data.next, data.operation);
+    returnData.total = operate(data.total, data.next, data.operation);
   }
 
-  return data;
+  return returnData;
 }
 
 export default calculate;
