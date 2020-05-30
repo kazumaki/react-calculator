@@ -19,13 +19,13 @@ const getGroups = () => {
       currentGroup += 1;
       buttons = [];
     } else if (symbols[i] === '0') {
-      buttons.push(<Button name={symbols[i]} color="light-gray" wide/>);
+      buttons.push(<Button name={symbols[i]} color="light-gray" wide />);
     } else {
       buttons.push(<Button name={symbols[i]} color="light-gray" />);
     }
   }
   return groups;
-}
+};
 
 const ButtonPanel = () => (
   <div id="button-panel">
