@@ -18,15 +18,18 @@ class App extends React.Component {
       total: null,
       next: null,
       display: null,
-      operation: null
+      operation: null,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
     if (operators.includes(buttonName)) {
-      const result = calculate(this.state, buttonName);
-      this.setState(result);
+      let result;
+      this.setState((prevState) => {
+        result = calculate(prevState, buttonName);
+        return result;
+      });
       this.setState({display: result.total});
     } else {
       const currentNext = this.state.next ? this.state.next += buttonName : buttonName
