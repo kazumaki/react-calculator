@@ -28,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="main-container" style={mainContainerStyle}>
-        <Display data={this.state} />
+        <Display result={this.state.dispaly} />
         <ButtonPanel clickHandle={this.handleClick} />
       </div>
     );

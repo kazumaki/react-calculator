@@ -26,11 +26,11 @@ class ButtonPanel extends React.Component {
           handleClick={this.handleClick}
           name={symbols[i]}
         />);
-        groups.push(<div
-          id={`group-${currentGroup}`}
-          style={rowStyle}>
-          {buttons} 
-        </div>);
+        groups.push(
+          <div id={`group-${currentGroup}`} style={rowStyle}>
+            {buttons}
+          </div>
+        );
         currentGroup += 1;
         buttons = [];
       } else if (symbols[i] === '0') {

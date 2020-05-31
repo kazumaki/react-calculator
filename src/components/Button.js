@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const 
-  {
-    name,
-    wide,
-    color,
-    handleClick,
-  } = props;
+  const
+    {
+      name,
+      wide,
+      color,
+      handleClick,
+    } = props;
   const buttonSize = wide === true ? '50%' : '25%';
   const buttonStyle = {
     fontWeight: 'bold',
