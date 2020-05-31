@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   handleClick(buttonName) {
-    this.setState((prevState) => calculate(prevState, buttonName));
+    this.setState(prevState => calculate(prevState, buttonName));
   }
 
   render() {
@@ -31,8 +31,8 @@ class App extends React.Component {
         <Display data={this.state} />
         <ButtonPanel clickHandle={this.handleClick} />
       </div>
-    )
+    );
   }
-};
+}
 
 export default App;

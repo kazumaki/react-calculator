@@ -16,15 +16,14 @@ const displayStyle = {
 };
 
 const Display = props => {
-  const { result, data } = props;
+  const { data } = props;
   return <div id="display" style={displayStyle}>{`${data.display || 0}`}</div>;
 };
 
 Display.defaultProps = { result: '0' };
 
 Display.propTypes = {
-  result: PropTypes.string,
-  next: PropTypes.string,
+  data: PropTypes.object,
 };
 
 export default Display;
