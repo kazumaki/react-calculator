@@ -29,7 +29,7 @@ class ButtonPanel extends React.Component {
         groups.push(
           <div id={`group-${currentGroup}`} style={rowStyle}>
             {buttons}
-          </div>
+          </div>,
         );
         currentGroup += 1;
         buttons = [];
