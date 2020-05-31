@@ -9,32 +9,20 @@ const mainContainerStyle = {
   width: 700,
 };
 
-const operators = ['AC', '+/-', '%', '÷', '+', '-', 'X', '='];
-
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       total: null,
       next: null,
-      display: null,
       operation: null,
+      dispaly: null,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
-    if (operators.includes(buttonName)) {
-      let result;
-      this.setState((prevState) => {
-        result = calculate(prevState, buttonName);
-        return result;
-      });
-      this.setState({display: result.total});
-    } else {
-      const currentNext = this.state.next ? this.state.next += buttonName : buttonName
-      this.setState({ next: currentNext, display: currentNext})
-    }
+    this.setState((prevState) => calculate(prevState, buttonName));
   }
 
   render() {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import PropTypes from 'prop-types';
 
 const rowStyle = {
   display: 'flex',

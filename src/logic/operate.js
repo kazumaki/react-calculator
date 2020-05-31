@@ -14,8 +14,7 @@ const operate = (numberOne, numberTwo, operation) => {
   } else if (operation === '÷') {
     result = bigOne.div(bigTwo);
   } else if (operation === '%') {
-    console.log('eoq')
-    result = bigOne.times(bigTwo.div(100));
+    result = bigOne.plus(bigOne.times(bigTwo.div(100)));
   }
 
   return result.toFixed();
