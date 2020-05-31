@@ -20,8 +20,6 @@ const Display = props => {
   return <div id="display" style={displayStyle}>{`${data.display || 0}`}</div>;
 };
 
-Display.defaultProps = { result: '0' };
-
 Display.propTypes = {
   data: PropTypes.object,
 };

@@ -3,11 +3,11 @@ import operate from './operate';
 const operators = ['+', '-', 'X', '÷', '%'];
 
 const calculate = (data, button) => {
-  const returnData = { 
+  const returnData = {
     total: data.total,
     next: data.next,
     operation: data.operation,
-    display: data.display
+    display: data.display,
   };
 
   if (operators.includes(button)) {

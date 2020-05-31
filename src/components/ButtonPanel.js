@@ -22,14 +22,15 @@ class ButtonPanel extends React.Component {
     let currentGroup = 0;
     for (let i = 0; i < symbols.length; i += 1) {
       if ((i + 1) % 4 === 0 || symbols[i] === '=') {
-        buttons.push(<Button 
-                      handleClick={this.handleClick}
-                      name={symbols[i]}
-                    />);
+        buttons.push(<Button
+          handleClick={this.handleClick}
+          name={symbols[i]}
+        />);
         groups.push(<div
-            id={`group-${currentGroup}`}
-            style={rowStyle}> {buttons} 
-          </div>);
+          id={`group-${currentGroup}`}
+          style={rowStyle}>
+          {buttons} 
+        </div>);
         currentGroup += 1;
         buttons = [];
       } else if (symbols[i] === '0') {
@@ -39,7 +40,7 @@ class ButtonPanel extends React.Component {
       }
     }
     return groups;
-  };
+  }
 
   handleClick(e) {
     this.clickHandle(e.target.textContent);
@@ -50,12 +51,12 @@ class ButtonPanel extends React.Component {
       <div id="button-panel">
         {this.getGroups()}
       </div>
-    )
+    );
   }
 }
 
 ButtonPanel.propTypes = {
-  clickHandle: PropTypes.func,
-}
+  clickHandle: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;
