@@ -8,7 +8,9 @@ const totalOperate = data => {
     if (data.operation === '÷') {
       if (data.next === 0) {
         return null;
-      } else if (data.next) {
+      }
+
+      if (data.next) {
         return operate(data.total || 0, data.next, data.operation);
       }
 
@@ -17,7 +19,7 @@ const totalOperate = data => {
     return operate(data.total || 0, data.next || 0, data.operation);
   }
   return data.next;
-}
+};
 
 const calculate = (data, button) => {
   const returnData = Object.assign({}, data);
@@ -42,7 +44,7 @@ const calculate = (data, button) => {
   } else if (button === '.') {
     if (returnData.next) {
       if (!returnData.next.includes('.')) {
-        returnData.next = returnData.next + button;
+        returnData.next += button;
       }
     } else {
       returnData.next = `0${button}`;
