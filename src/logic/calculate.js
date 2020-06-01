@@ -40,6 +40,7 @@ const calculate = (data, button) => {
   } else if (button === 'AC') {
     returnData.total = 0;
     returnData.next = 0;
+    returnData.operation = null;
     resultState = 'total';
   } else if (button === '.') {
     if (returnData.next) {
