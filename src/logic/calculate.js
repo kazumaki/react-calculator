@@ -3,21 +3,20 @@ import operate from './operate';
 const operators = ['+', '-', 'X', '÷', '%'];
 let resultState = 'total';
 
-const totalOperate = (data) => {
+const totalOperate = data => {
   if (data.operation) {
     if (data.operation === '÷') {
-      if (data.next == 0) {
+      if (data.next === 0) {
         return null;
       } else if (data.next) {
         return operate(data.total || 0, data.next, data.operation);
-      } else {
-        return null;
       }
+
+      return null;
     }
     return operate(data.total || 0, data.next || 0, data.operation);
-  } else {
-    return data.next;
   }
+  return data.next;
 }
 
 const calculate = (data, button) => {
@@ -46,7 +45,7 @@ const calculate = (data, button) => {
         returnData.next = returnData.next + button;
       }
     } else {
-      returnData.next = '0' + button;
+      returnData.next = `0${button}`;
     }
     resultState = 'next';
   } else {
