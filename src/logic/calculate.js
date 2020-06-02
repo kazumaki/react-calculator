@@ -5,17 +5,6 @@ let resultState = 'total';
 
 const totalOperate = data => {
   if (data.operation) {
-    if (data.operation === '÷') {
-      if (data.next === 0) {
-        return null;
-      }
-
-      if (data.next) {
-        return operate(data.total || 0, data.next, data.operation);
-      }
-
-      return null;
-    }
     return operate(data.total || 0, data.next || 0, data.operation);
   }
   return data.next;

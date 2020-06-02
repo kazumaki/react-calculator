@@ -6,6 +6,8 @@ import calculate from '../logic/calculate';
 const mainContainerStyle = {
   display: 'flex',
   flexDirection: 'column',
+  margin: 'auto',
+  fontSize: 35,
   width: 700,
 };
 
