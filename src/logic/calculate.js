@@ -20,8 +20,8 @@ const calculate = (data, button) => {
     resultState = 'total';
   } else if (button === '=') {
     returnData.total = totalOperate(returnData);
-    returnData.next = 0;
-    returnData.result = returnData.total;
+    returnData.next = returnData.total;
+    returnData.operation = null;
     resultState = 'total';
   } else if (button === '+/-') {
     returnData.total *= -1;
@@ -42,7 +42,6 @@ const calculate = (data, button) => {
     resultState = 'next';
   } else {
     returnData.next = data.next ? data.next + button : button;
-    returnData.result = returnData.next;
     resultState = 'next';
   }
   returnData.result = resultState === 'total' ? returnData.total : returnData.next;
