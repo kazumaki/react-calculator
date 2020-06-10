@@ -17,7 +17,7 @@ const displayStyle = {
 
 const Display = props => {
   const { result } = props;
-  return <div id="display" style={displayStyle}>{result}</div>;
+  return <div id="display" style={displayStyle}>{`${result || 0}`}</div>;
 };
 
 Display.defaultProps = { result: '0' };
