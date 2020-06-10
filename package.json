@@ -32,6 +32,7 @@
     ]
   },
   "devDependencies": {
-    "big.js": "^5.2.2"
+    "big.js": "^5.2.2",
+    "prop-types": "^15.7.2"
   }
 }
