@@ -1,6 +1,6 @@
 # React Calculator
 
-The purpose of this project is to creat a beauty and clean calculator using React.
+The purpose of this project is to create beauty and clean calculator using React.
 
 ## Screenshot
 
@@ -12,7 +12,7 @@ Clone the repository into your local computer.
 
 ### Installing
 
-First you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise the npx command could not be available. Then move into the project main directory on the console and follow the instructions below. 
+First, you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise, the npx command could not be available. Then move into the project main directory on the console and follow the instructions below. 
 
 Install all packages:
 
