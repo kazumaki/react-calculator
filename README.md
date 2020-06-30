@@ -1,6 +1,6 @@
 # React Calculator
 
-The purpose of this project is to create beauty and clean calculator using React.
+A beauty and simple calculator built with React.js.
 
 ## Screenshot
 
@@ -27,6 +27,12 @@ $ npm start
 ```
 
 Now open the `http://localhost:3000/` in the browser.
+
+## Ideas for improvement
+
+- Accept keyboard input.
+- Add scientific calculator options.
+- Make the design responsive.
 
 ## Built With
 
