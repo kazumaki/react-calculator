@@ -1,6 +1,6 @@
 # React Calculator
 
-A beauty and simple calculator built with React.js.
+A beauty and simple calculator built with React.js
 
 ## Screenshot
 
@@ -8,11 +8,11 @@ A beauty and simple calculator built with React.js.
 
 ## Getting Started
 
-Clone the repository into your local computer.
+Clone the repository into your local computer
 
 ### Installing
 
-First, you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise, the npx command could not be available. Then move into the project main directory on the console and follow the instructions below. 
+First, you'll have to install the newest version of [Node](https://nodejs.org/en/download/). Otherwise, the npx command could not be available. Then move into the project main directory on the console and follow the instructions below
 
 Install all packages:
 
@@ -26,13 +26,13 @@ Run Local WebServer:
 $ npm start
 ```
 
-Now open the `http://localhost:3000/` in the browser.
+Now open the `http://localhost:3000/` in the browser
 
 ## Ideas for improvement
 
-- Accept keyboard input.
-- Add scientific calculator options.
-- Make the design responsive.
+- Accept keyboard input
+- Add scientific calculator options
+- Make the design responsive
 
 ## Built With
 
