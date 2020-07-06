@@ -7,7 +7,7 @@ A beautiful and simple calculator built with React.js
 ![Screenshot of the webpage](src/images/screenshot.png)
 
 ## Live version
-[https://new-react-calculator.herokuapp.com/](https://new-react-calculator.herokuapp.com/)
+[Live Version](https://new-react-calculator.herokuapp.com/)
 
 ## Getting Started
 
