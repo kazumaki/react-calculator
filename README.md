@@ -1,6 +1,6 @@
 # React Calculator
 
-A beauty and simple calculator built with React.js
+A beautiful and simple calculator built with React.js
 
 ## Screenshot
 
